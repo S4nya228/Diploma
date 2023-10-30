@@ -1,0 +1,142 @@
+.burger {
+  position: relative;
+  z-index: 300;
+  display: none;
+  min-width: 30px;
+  min-height: 20px;
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    transition: all .2s;
+
+    &:first-child {
+      top: 0;
+    }
+
+    &:last-child {
+      top: auto;
+      bottom: 0;
+    }
+  }
+
+  &.active {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+
+    span {
+      background-color: #000000;
+      transform: scale(0);
+
+      &:first-child {
+        top: calc(50% - 1px);
+        transform: rotate(-45deg);
+      }
+
+      &:last-child {
+        bottom: calc(48% - 1px);
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.lock {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+  .header__help::after {
+    display: none;
+  }
+
+  .header__top {
+    position: fixed;
+    top: -100%;
+    left: 0%;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+
+    &:first-child::after {
+      background-color: transparent;
+    }
+
+    &.active {
+      top: 0;
+    }
+  }
+
+  .header__info {
+    &.active {
+      padding-top: 25px;
+      z-index: 201;
+    }
+  }
+
+  .header__top-holder {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+  }
+  .header__top-function-holder {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px ;
+    font-weight: 500;
+  }
+
+  .header__create-petition {
+    position: absolute;
+    top: 200px;
+    left: -100%;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    &.active {
+      left: 0;
+    }
+  }
+
+  .header__search-box {
+    position: absolute;
+    top: 270px;
+    left: -100%;
+    z-index: 200;
+    padding: 10px;
+    width: 100%;
+
+    &.active {
+      left: 0;
+    }
+
+  }
+
+
+  .header__input {
+    width: 100%;
+  }
+
+  .header__top {
+    display: block;
+    padding-top: 30px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+
+}
+

@@ -1,0 +1,118 @@
+.registration {
+  &__holder {
+    max-width: 330px;
+    padding: 2rem 1rem;
+    margin: 50px auto;
+    font-family: Montserrat;
+    text-align: center;
+    background-color: rgb(255 255 252);
+    box-shadow: 0 20px 35px rgb(0 0 0 / 10%);
+  }
+  &__label{
+    margin-bottom: 1.2rem;
+    font-size: 32px;
+    color: black;
+  }
+  &__area{
+    width: 92%;
+    padding: 12px 10px;
+    margin-bottom: 10px;
+    background: #e4e4e4;
+    border: 1px solid #e4e4e4;
+    &:focus {
+      border: 1px solid rgb(192 192 192);
+    }
+  }
+  &__terms{
+    margin-top: .2rem;
+  }
+  &__terms-area {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  &__label-area {
+    font-size: .7rem;
+  }
+  &__button-login{
+    width: 90%;
+    padding: 10px 0;
+    margin-top: 1.8rem;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    background: #356cff;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    transition: all .2s;
+
+    &:hover {
+      box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
+      transform: translateY(-3px);
+    }
+
+    &:active {
+      box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+      transform: translateY(-1px);
+    }
+
+    &::after {
+      background-color: black;
+    }
+
+    &:hover::after {
+      opacity: 0;
+      transform: scaleX(1.4) scaleY(1.6);
+    }
+  }
+  &__member {
+    margin-top: 1.4rem;
+    font-size: .829rem;
+    color: black;
+  }
+  &__member-link{
+    color: #356cff !important;
+  }
+  &__label-area-link{
+    color: #356cff !important;
+  }
+  &__recover {
+    margin: .3rem 1.4rem 0 0;
+    font-size: .8rem;
+    text-align: right;
+  }
+
+  &__recover-link {
+    color: rgb(69 69 250);
+    transition: color 0.3s;
+  }
+
+  &__recover-link:hover {
+    color: #356cff;
+
+  }
+
+
+}
+.text-danger{
+  color: red;
+  font-size: 12px;
+}
+.main__info-field {
+  font-family: Montserrat;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color:white;
+  background-color: #356cff;
+  padding: 20px;
+  display: flex;
+}
+.main__close-button{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

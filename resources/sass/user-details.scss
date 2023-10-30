@@ -1,0 +1,253 @@
+.personal-details{
+  font-family: Montserrat;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+
+  &__title {
+    margin-top: 35px;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 30px;
+    border-bottom: 1px solid rgb(204 204 204 / 50%);
+  }
+
+  &__first-name {
+    display: flex;
+
+
+  }
+
+  &__first-name-title {
+    font-weight: 500;
+    width: 150px;
+  }
+
+  &__first-name-description {
+  }
+
+  &__last-name {
+    display: flex;
+
+  }
+
+  &__last-name-title {
+    font-weight: 500;
+    width: 150px;
+  }
+
+  &__last-name-description {
+  }
+
+  &__middle-name {
+
+    display: flex;
+  }
+
+  &__middle-name-title {
+    font-weight: 500;
+    width: 150px;
+  }
+
+  &__middle-name-description {
+  }
+
+  &__email {
+
+    display: flex;
+  }
+  &__phone{
+
+    display: flex;
+  }
+
+  &__email-name-title {
+    font-weight: 500;
+    width: 150px;
+  }
+
+  &__email-name-description {
+  }
+
+  &__txt {
+    padding: 10px;
+    font-size: 16px;
+    color: #555555;
+    min-width: 220px;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    outline: none;
+
+    &:focus {
+      border: 2.5px solid #356cff;
+    }
+  }
+
+  &__exit {
+    margin-top: 10px;
+  }
+  &__buttons{
+    display: flex;
+    gap: 10px;
+  }
+
+  &__exit-button {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    border: 2px solid black;
+    border-radius: 6em;
+    transition: all .2s;
+
+    &:hover {
+      box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
+      transform: translateY(-3px);
+    }
+
+    &:active {
+      box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+      transform: translateY(-1px);
+    }
+
+    &::after {
+      background-color: black;
+    }
+
+    &:hover::after {
+      opacity: 0;
+      transform: scaleX(1.4) scaleY(1.6);
+    }
+  }
+
+  &__edit-button {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background-color: #356cff;
+    border-radius: 6em;
+    transition: all .2s;
+
+    &:hover {
+      box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
+      transform: translateY(-3px);
+    }
+
+    &:active {
+      box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+      transform: translateY(-1px);
+    }
+
+    &::after {
+      background-color: black;
+    }
+
+    &:hover::after {
+      opacity: 0;
+      transform: scaleX(1.4) scaleY(1.6);
+    }
+  }
+
+  &__save-button {
+    padding: 10px;
+    display: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    background-color: #356cff;
+    border-radius: 6em;
+    transition: all .2s;
+
+    &:hover {
+      box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
+      transform: translateY(-3px);
+    }
+
+    &:active {
+      box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+      transform: translateY(-1px);
+    }
+
+    &::after {
+      background-color: black;
+    }
+
+    &:hover::after {
+      opacity: 0;
+      transform: scaleX(1.4) scaleY(1.6);
+    }
+  }
+  .edit--active{
+
+    .personal-details__edit-button{
+      display: none;
+
+    }
+    .personal-details__save-button{
+      display: block;
+
+    }
+
+  }
+
+  &__button {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 448px) {
+  .personal-details{
+    &__content{
+      gap: 10px;
+    }
+    &__form{
+
+    }
+    &__buttons{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    &__first-name{
+      flex-direction: column;
+      gap: 5px;
+
+    }
+    &__last-name{
+      flex-direction: column;
+      gap: 5px;
+
+    }
+    &__middle-name{
+      flex-direction: column;
+      gap: 5px;
+
+    }
+    &__email{
+      flex-direction: column;
+      gap: 5px;
+
+    }
+    &__phone{
+      flex-direction: column;
+      gap: 5px;
+
+    }
+
+    &__button{
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+}
